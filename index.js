@@ -1,17 +1,25 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for (let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[i] + array[j] === target) {
+        return true
+      }
+    }
+  }
+  return false
 }
 
 /* 
-  Write the Big O time complexity of your function here
+  The reduce function has an Big O of O(n^2), where n = the number of integers in the array
 */
 
 /* 
-  Add your pseudocode here
+ function uses a double for statement to add each element in the array to all other elements of the array subsequently
 */
 
 /*
-  Add written explanation of your solution here
+ the second for statement runs through each value of i before the iteration reaches i + 1
+ This isn't the best method for larger data sets but technically could be faster for small ones less than 10. O(n) would be better!
 */
 
 // You can run `node index.js` to view these console logs
